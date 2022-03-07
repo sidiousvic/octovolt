@@ -1,0 +1,15 @@
+{
+  "name": "octovolt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sidiousvic/octovolt.git",
+  "author": "sidiousvic <victor6rene@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npx parcel index.html --port 9998"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "githubhook": "^1.9.3"
+  }
+}
