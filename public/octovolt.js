@@ -253,7 +253,7 @@ const launch = ({ canvas, Mouse, Score, Player, Coin, Enemy, Sound }) => {
       L: document.getElementById("enemy"),
     };
     const spawnedEnemy =
-      Enemy(randomEnemyX)(randomEnemyY)(40)(enemySprites)(randomSpeedNotZero);
+      Enemy(randomEnemyX)(randomEnemyY)(50)(enemySprites)(randomSpeedNotZero);
     enemies.push(spawnedEnemy);
   };
 
@@ -319,7 +319,7 @@ const launch = ({ canvas, Mouse, Score, Player, Coin, Enemy, Sound }) => {
       sound.mute(z);
     }
   });
-  
+
   addEventListener("touchstart", () => {
     document.getElementById("start-overlay")?.remove();
     if (sound.bark.muted) {
