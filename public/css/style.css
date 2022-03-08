@@ -88,6 +88,6 @@ sup {
   width: 100vw;
   z-index: 99;
   content: " ";
-  background-image: radial-gradient(transparent, rgb(88, 76, 254));
+  background-image: radial-gradient(transparent, rgb(73, 60, 255));
   background-size: 3px 3px;
 }
