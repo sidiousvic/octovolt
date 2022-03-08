@@ -1,7 +1,5 @@
 # octovolt
 
-<a href="https://sidiousvic.github.io/octovolt/"><img src="./public/images/octovoltR.gif"></a>
+<a href="https://sidiousvic.github.io/octovolt/"><img src="./public/images/octovolt.png"></a>
 
 @sidiousvic
-# octovolt
-# octovolt

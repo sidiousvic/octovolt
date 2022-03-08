@@ -1,25 +1,20 @@
 @font-face {
-  font-family: "The Legend of Zelda NES";
-  src: url("../fonts/The-Legend-of-Zelda-NES.woff2") format("woff2"),
-    url("../fonts/The-Legend-of-Zelda-NES.woff") format("woff");
+  font-family: "mamemoji";
+  src: url("../fonts/mamemoji.ttf") format("woff2"),
+    url("../fonts/mamemoji.ttf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 canvas {
-  position: absolute;
   top: 0px;
   left: 0px;
-  filter: hue-rotate(60deg) !important;
+  cursor: none;
 }
-/* * {
-  cursor: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7),
-    auto;
-} */
 
 :root {
   --bg: rgb(28, 31, 7);
-  --fg: rgb(0, 179, 116);
+  --fg: rgb(178 176 190);
 }
 
 body {
@@ -27,11 +22,11 @@ body {
   background-color: var(--bg);
   cursor: none;
   position: fixed;
-  filter: blur(0.5px) hue-rotate(20deg) saturate(2) contrast(3);
+  filter: blur(0.5px) hue-rotate(20deg) saturate(0.6) contrast(3);
 }
 
 #start-overlay {
-  background-color: rgb(31 35 64 / 96%);
+  background-color: rgba(136, 18, 210, 0.96);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -44,29 +39,29 @@ body {
   font-size: 30px;
 }
 
-canvas {
-  cursor: none;
-}
-
 img {
   mix-blend-mode: exclusion;
   image-rendering: pixelated;
 }
 
-#green-hue {
-  filter: hue-rotate(90deg) !important;
-}
-
 p,
 sup {
   color: var(--fg);
-  font-size: 40;
-  font-family: The Legend of Zelda NES;
+  font-size: 50px;
+  font-family: mamemoji;
   width: 500px;
+  mix-blend-mode: color-dodge;
+  margin-block: 10px;
 }
 
-img {
-  filter: hue-rotate(90deg) !important;
+sup {
+  font-size: 40px;
+}
+
+#title,
+#score {
+  color: rgb(219, 147, 255);
+  mix-blend-mode: color-dodge;
 }
 
 #title {
@@ -81,7 +76,7 @@ img {
 
 #sound {
   position: absolute;
-  top: 90px;
+  top: 120px;
   left: 30px;
   z-index: 99;
 }
@@ -92,10 +87,6 @@ img {
   width: 100vw;
   z-index: 99;
   content: " ";
-  background-image: radial-gradient(transparent, rgba(0, 255, 123, 0.646));
+  background-image: radial-gradient(transparent, rgb(88, 76, 254));
   background-size: 3px 3px;
-}
-
-sup {
-  font-size: 20px;
 }

@@ -319,6 +319,18 @@ const launch = ({ canvas, Mouse, Score, Player, Coin, Enemy, Sound }) => {
       sound.mute(z);
     }
   });
+  
+  addEventListener("touchstart", () => {
+    document.getElementById("start-overlay")?.remove();
+    if (sound.bark.muted) {
+      sound.sprite.src = "./public/images/soundon.png";
+      sound.unmute(z);
+      sound.bark.play();
+    } else {
+      sound.sprite.src = "./public/images/soundoff.png";
+      sound.mute(z);
+    }
+  });
 
   return z;
 };
