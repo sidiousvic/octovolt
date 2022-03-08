@@ -294,6 +294,11 @@ const launch = ({ canvas, Mouse, Score, Player, Coin, Enemy, Sound }) => {
     mouse.y = clientY;
   });
 
+  addEventListener("touchmove", ({ clientX, clientY }) => {
+    mouse.x = clientX;
+    mouse.y = clientY;
+  });
+
   addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       document.getElementById("start-overlay")?.remove();
