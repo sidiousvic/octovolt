@@ -23,6 +23,7 @@ body {
   cursor: none;
   position: fixed;
   filter: blur(0.5px) hue-rotate(20deg) saturate(0.6) contrast(3);
+  touch-action: none;
 }
 
 #start-overlay {
