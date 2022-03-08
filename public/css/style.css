@@ -78,7 +78,8 @@ sup {
   position: absolute;
   top: 120px;
   left: 30px;
-  z-index: 99;
+  z-index: 10;
+  filter: invert(0.6);
 }
 
 #vca-overlay {
