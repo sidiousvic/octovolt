@@ -87,7 +87,7 @@ const Coin = (x) => (y) => (dimension) => (sprite) => ({
     /**@mechanic respawn coin when colliding with player */
     /**@mechanic spawn new enemy when colliding with player */
     collide(coin)(player)(() => {
-      if (!sound.coin.muted) sound.coin.play();
+      sound.coin.play();
       coin.respawn(z);
       enemies.spawn(z);
     });
@@ -121,7 +121,7 @@ const Enemy =
       /**@mechanic play bark sound when colliding with player */
       collide(enemy)(player)(() => {
         over(z);
-        if (!sound.bark.muted) sound.bark.play();
+        sound.bark.play();
       });
 
       /**@mechanic move enemy */
@@ -283,7 +283,6 @@ const launch = ({ canvas, Mouse, Score, Player, Coin, Enemy, Sound }) => {
   };
 
   /**@inits */
-  sound.mute(z);
   enemies.spawn(z);
 
   /**@sideffects */
@@ -302,39 +301,15 @@ const launch = ({ canvas, Mouse, Score, Player, Coin, Enemy, Sound }) => {
   addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       document.getElementById("start-overlay")?.remove();
-      if (sound.bark.muted) {
-        sound.sprite.src = "./public/images/soundon.png";
-        sound.unmute(z);
-        sound.bark.play();
-      } else {
-        sound.sprite.src = "./public/images/soundoff.png";
-        sound.mute(z);
-      }
     }
   });
 
   addEventListener("click", () => {
     document.getElementById("start-overlay")?.remove();
-    if (sound.bark.muted) {
-      sound.sprite.src = "./public/images/soundon.png";
-      sound.unmute(z);
-      sound.bark.play();
-    } else {
-      sound.sprite.src = "./public/images/soundoff.png";
-      sound.mute(z);
-    }
   });
 
   addEventListener("touchstart", () => {
     document.getElementById("start-overlay")?.remove();
-    if (sound.bark.muted) {
-      sound.sprite.src = "./public/images/soundon.png";
-      sound.unmute(z);
-      sound.bark.play();
-    } else {
-      sound.sprite.src = "./public/images/soundoff.png";
-      sound.mute(z);
-    }
   });
 
   return z;
