@@ -294,9 +294,9 @@ const launch = ({ canvas, Mouse, Score, Player, Coin, Enemy, Sound }) => {
     mouse.y = clientY;
   });
 
-  addEventListener("touchmove", ({ clientX, clientY }) => {
-    mouse.x = clientX;
-    mouse.y = clientY;
+  addEventListener("touchmove", ({ touches }) => {
+    mouse.x = touches[0].clientX;
+    mouse.y = touches[0].clientY;
   });
 
   addEventListener("keydown", (e) => {
